@@ -1,0 +1,24 @@
+{{ define "base" }}
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" type="text/css" href="base.css" />
+      <title>{{ .Title }}</title>
+    </head>
+    {{ template "navbar" }}
+    <body>
+      <div class="page-container">
+        <div></div>
+        <div>
+          {{ $sections := .Content }}
+          {{ range $section := $sections }}
+            <section>{{ $section }}</section>
+          {{ end }}
+        </div>
+        <div></div>
+      </div>
+    </body>
+  </html>
+{{ end }}

@@ -1,0 +1,16 @@
+{{ define "post" }}
+  <div></div>
+  {{ $sections := .Post.Sections }}
+  <div>
+    <h1>{{ .Post.Title }}</h1>
+    <div>
+      <h4>By {{ .Post.Author }} on {{ .Post.Date }}</h4>
+    </div>
+    <div>
+      {{ range $section := $sections }}
+        <section>{{ $section }}</section>
+      {{ end }}
+    </div>
+  </div>
+  <div></div>
+{{ end }}
