@@ -45,15 +45,39 @@
     <div class="center-nav"></div>
     <div class="right-nav">
       <ul>
-        <!-- <a href="https://www.joebonneau.com">Home</a> -->
-        <!-- <a href="https://www.joebonneau.com/about">About</a> -->
-        <!-- <a href="https://www.joebonneau.com/blog">Blog</a> -->
-        <!-- <a href="resume">Resume</a> -->
         <li><a class="nav-link" href="home.html">Home</a></li>
         <li><a class="nav-link" href="about.html">About</a></li>
         <li><a class="nav-link" href="blog.html">Blog</a></li>
-        <!-- <a href="resume">Resume</a> -->
       </ul>
     </div>
   </header>
+{{ end }}
+
+{{ define "base" }}
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto"
+      />
+      <link rel="stylesheet" type="text/css" href="../static/base.css" />
+      <title>{{ .Title }}</title>
+    </head>
+    {{ template "navbar" }}
+    <body>
+      <div class="page-container">
+        <div></div>
+        <div>
+          {{ $sections := .Content }}
+          {{ range $section := $sections }}
+            <section>{{ $section }}</section>
+          {{ end }}
+        </div>
+        <div></div>
+      </div>
+    </body>
+  </html>
 {{ end }}
