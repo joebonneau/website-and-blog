@@ -7,12 +7,12 @@ body {
 
 div.page-container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 5fr 1fr;
 }
 
 header.navbar-container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 5fr 1fr;
   height: 50px;
   align-items: center;
   position: sticky;
@@ -31,19 +31,24 @@ div.left-nav {
 
 div.right-nav {
   font-family: "Roboto Mono", monospace;
+  display: flex;
+  justify-content: start;
 }
 
-/* div.center-nav { */
-/*   flex: 2 0 0; */
-/*   justify-content: end; */
-/* } */
+div.center-nav {
+  display: flex;
+  justify-content: space-between;
+}
 
-/* div.right-nav { */
-/*   justify-content: end; */
-/* } */
+div.socials-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
 
 ul {
   list-style: none;
+  padding-inline-start: 0;
 }
 
 li {

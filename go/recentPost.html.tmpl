@@ -1,0 +1,24 @@
+{{ define "recentPost" }}
+  <div class="recent-post-container">
+    <div class="card-body">
+      <div class="left-side">
+        <h3>{{ .Title }}</h3>
+        <hr />
+        <p>{{ .Description }}</p>
+      </div>
+    </div>
+    <div class="card-footer">
+      {{ .Tag }}
+      {{ .Date }}
+    </div>
+  </div>
+{{ end }}
+
+{{ define "recentPosts" }}
+  <div class="recent-posts-container">
+    {{ $recentPosts := .RecentPosts }}
+    {{ range $recentPost := $recentPosts }}
+      {{ template "recentPost" $recentPost }}
+    {{ end }}
+  </div>
+{{ end }}

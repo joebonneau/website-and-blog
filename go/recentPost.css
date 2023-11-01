@@ -1,0 +1,10 @@
+div.recent-posts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+div.recent-post-container {
+  border-radius: 0.25rem;
+  border: 1px solid #c0caf5;
+}
