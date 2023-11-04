@@ -43,8 +43,8 @@ var homePage HomePage = HomePage{
 			Tag:         "Career",
 		},
 		{
-			Title:       "Some Other Guy's Path to Software Engineering",
-			Description: "How some other guy got into software engineering and what he's learned along the way.",
+			Title:       "Avoiding Decision Paralysis",
+			Description: "Tech is exciting; explore without getting overwhelmed.",
 			Date:        "2023-10-32",
 			Tag:         "Career",
 		},

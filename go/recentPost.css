@@ -1,10 +1,20 @@
 div.recent-posts-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 div.recent-post-container {
+  background-color: #c0caf5;
+  color: #24283b;
   border-radius: 0.25rem;
-  border: 1px solid #c0caf5;
+  border: 1px solid #73daca;
+}
+
+div.card-body {
+  padding: 0.5rem;
+}
+
+div.card-footer {
+  padding: 0 0.5rem;
 }

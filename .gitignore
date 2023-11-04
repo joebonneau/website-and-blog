@@ -19,3 +19,6 @@
 
 # Go workspace file
 go.work
+
+# Workspace script for t-smart-tmux-session-manager
+.t
